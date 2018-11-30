@@ -1,0 +1,31 @@
+﻿@model PutMeOnTheList.Models.Dish
+
+@{
+    ViewBag.Title = "SubmitDish";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.FirstName @Model.LastName is bringing a dish!</h2>
+<h2>DishName: @Model.DishName</h2>
+<h2>Dish Description: @Model.DishDescription</h2>
+@if (Model.GlutenFree == "on")
+{
+    <h2>This dish is Gluten Free.</h2>
+}
+@if (Model.Vegan == "on")
+{
+    <h2>This dish is Vegan.</h2>
+}
+@if (Model.Nuts == "on")
+{
+    <h2>This dish contains nuts</h2>
+}
+else
+{
+    <h2>This dish does not contain nuts</h2>
+}
+<br />
+<a type="button" href="/Home/Index" class="btn btn-primary btn-lg">Home</a>
+
+
+

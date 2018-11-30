@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dish Info</h2>
+
+<form action="/Dish/SubmitDish" method="post">
+    <div class="form-group required">
+        <label class="control-label">First Name</label>
+        <input type="text" class="form-control" name="FirstName" placeholder="Enter First Name" required>
+    </div>
+    <div class="form-group required">
+        <label class="control-label">Last Name</label>
+        <input type="text" class="form-control" name="LastName" placeholder="Enter Last Name" required>
+    </div>
+
+    <div class="form-group">
+        <label class="register-form-text">Phone Number: </label>
+        <input type="tel" pattern="[\(]\d{3}[\)]\d{3}[\-]\d{4}" class="form-control" name="PhoneNumber" placeholder="Enter Phone Number">
+        <p class="form-text">FORMAT: (###)###-####</p>
+    </div>
+
+    <div class="form-group required">
+        <label class="control-label">Dish Name</label>
+        <input type="text" class="form-control" name="DishName" placeholder="Enter Dish Name" required>
+    </div>
+
+    <div class="form-group">
+        <label>Dish Description</label>
+        <textarea class="form-control" name="DishDescription" rows="3"></textarea>
+    </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" name="GlutenFree"> This dish is Gluten Free<br>
+        <input type="checkbox" name="Vegan"> This dish is Vegan<br>
+        <input type="checkbox" name="Nuts"> This dish contains nuts<br>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+</form>
+<br />
+<br />
+<a type="button" href="/Home/Index" class="btn btn-primary btn-lg">Home</a>

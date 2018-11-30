@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>RSVP</h2>
+
+<form action="/RSVP/Welcome" method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" name="Email" placeholder="Enter Email" required>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group required">
+        <label class="control-label">First Name</label>
+        <input type="text" class="form-control" name="FirstName" placeholder="Enter First Name" required>
+    </div>
+    <div class="form-group required">
+        <label class="control-label">Last Name</label>
+        <input type="text" class="form-control" name="LastName" placeholder="Enter Last Name" required>
+    </div>
+
+    <div class="form-group required">
+        <label class="control-label">Will you be attending?</label>
+        <select class="form-control" name="Attending" id="Attending" required>
+            <option value=""></option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+    </div>
+
+    <div class="form-group" id="PartyDates">
+        <label>If attending, which party are you planning to attend?</label><br />
+        <input type="radio" name="PartyDate" value="12/29/18"> 12/29/18<br>
+        <input type="radio" name="PartyDate" value="12/30/18"> 12/30/18<br>
+
+    </div>
+
+    <div class="form-group form-check">
+        <input type="checkbox" name="PlusOne"> I'm bringing a "Plus 1"<br>
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+</form>
+<br />
+<br />
+<a type="button" href="/Home/Index" class="btn btn-primary btn-lg">Home</a>

@@ -1,0 +1,26 @@
+﻿@model PutMeOnTheList.Models.Guest
+
+@{
+    ViewBag.Title = "Welcome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.Attending == "No")
+{
+    <h2>Too Bad you can't make it.  We'll miss you!</h2>
+}
+else
+{
+    <h2>@Model.FirstName @Model.LastName has RSVP'ed!</h2>
+    <h2> Email address: @Model.Email</h2>
+    <h2>You are attending the @Model.PartyDate party.</h2>
+
+    if (Model.PlusOne == "on")
+    {
+        <h2>You are bringing a Plus 1.</h2>
+    }
+}
+<br />
+
+<a type="button" href="/Home/Index" class="btn btn-primary btn-lg mr-5">Home</a>
+<a type="button" href="/Dish/Index" class="btn btn-primary btn-lg">Bring a Dish</a>
