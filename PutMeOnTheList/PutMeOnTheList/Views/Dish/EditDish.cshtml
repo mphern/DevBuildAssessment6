@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "EditDish";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model PutMeOnTheList.Models.Dish
+
+<form action="~/Dish/SaveDishChanges" method="post">
+    <input type="hidden" name="DishID" value="@Model.DishID" />
+    <label>First Name:</label>
+    <input class="mx-2" type="text" name="FirstName" value="@Model.FirstName" />
+    <label>Last Name:</label>
+    <input class="mx-2" type="text" name="LastName" value="@Model.LastName" /><br />
+    <label>Phone Number:</label>
+    <input class="mx-2" type="text" name="PhoneNumber" value="@Model.PhoneNumber" />
+    <label>Dish Name:</label>
+    <input class="mx-2" type="text" name="DishName" value="@Model.DishName" /><br />
+    <label>Dish Description:</label>
+    <input class="mx-2" type="text" name="DishDescription" value="@Model.DishDescription" />
+    <label>Gluten Free:</label>
+    <input class="mx-2" type="text" name="GlutenFree" value="@Model.GlutenFree" /><br />
+    <label>Vegan:</label>
+    <input class="mx-2" type="text" name="Vegan" value="@Model.Vegan" />
+    <label>Has Nuts:</label>
+    <input class="mx-2" type="text" name="Nuts" value="@Model.Nuts" />
+    <input type="submit" class="btn-primary" />
+
+</form>
+

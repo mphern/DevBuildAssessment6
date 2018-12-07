@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PartyDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Dish">
+    <Key>
+      <PropertyRef Name="DishID" />
+    </Key>
+    <Property Name="DishID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PhoneNumber" Type="nvarchar" MaxLength="24" Nullable="false" />
+    <Property Name="DishName" Type="nvarchar" MaxLength="50" />
+    <Property Name="DishDescription" Type="nvarchar" MaxLength="100" />
+    <Property Name="GlutenFree" Type="nvarchar" MaxLength="3" />
+    <Property Name="Vegan" Type="nvarchar" MaxLength="3" />
+    <Property Name="Nuts" Type="nvarchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="Guest">
+    <Key>
+      <PropertyRef Name="GuestID" />
+    </Key>
+    <Property Name="GuestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+    <Property Name="AttendanceDate" Type="nvarchar" MaxLength="15" />
+    <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="PlusOne" Type="nvarchar" MaxLength="3" />
+    <Property Name="Attending" Type="nvarchar" MaxLength="3" />
+  </EntityType>
+  <EntityContainer Name="PartyDBModel1StoreContainer">
+    <EntitySet Name="Dish" EntityType="Self.Dish" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Guest" EntityType="Self.Guest" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
