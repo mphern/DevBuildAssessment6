@@ -2,13 +2,13 @@
     padding-top: 50px;
     padding-bottom: 20px;
     background-image: url("/Images/potluck.jpeg") !important;
-    height: 100% !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-size: 1.8rem !important;
+    min-height: 1000px !important;
 }
-
-/* Set padding to keep content from hitting the edges */
-.body-content {
+    /* Set padding to keep content from hitting the edges */
+    .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -24,10 +24,43 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 200px;
 }
 
 .form-group.required .control-label:after {
     content: "*";
     color: red;
+}
+
+#main-header {
+    font-family: 'Acme', sans-serif;
+    font-size: 100px !important;
+}
+
+#register {
+    font-size: 3.25rem !important;
+}
+
+.form-control {
+    font-size: 1.35rem !important;
+}
+
+#rsvp {
+    width: 25%;
+    height: auto;
+    margin-top: -100px;
+    margin-bottom: -25px
+}
+
+#rsvp-buttons, #dish-home {
+    display: flex;
+    justify-content: center;
+}
+
+#phone-format {
+    font-size: 1rem !important;
+}
+
+#dish-desc {
+    max-width: 275px;
 }

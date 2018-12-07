@@ -78,3 +78,7 @@ C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOn
 C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\obj\Debug\PutMeOnTheList.csproj.CopyComplete
 C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\obj\Debug\PutMeOnTheList.dll
 C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\obj\Debug\PutMeOnTheList.pdb
+C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\bin\EntityFramework.dll
+C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\bin\EntityFramework.SqlServer.dll
+C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\bin\EntityFramework.xml
+C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\bin\EntityFramework.SqlServer.xml

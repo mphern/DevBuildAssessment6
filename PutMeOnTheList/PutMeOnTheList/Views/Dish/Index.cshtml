@@ -7,6 +7,7 @@
 <h2>Dish Info</h2>
 
 <form action="/Dish/SubmitDish" method="post">
+    <input type="hidden" name="DishID" />
     <div class="form-group required">
         <label class="control-label">First Name</label>
         <input type="text" class="form-control" name="FirstName" placeholder="Enter First Name" required>
@@ -19,7 +20,7 @@
     <div class="form-group">
         <label class="register-form-text">Phone Number: </label>
         <input type="tel" pattern="[\(]\d{3}[\)]\d{3}[\-]\d{4}" class="form-control" name="PhoneNumber" placeholder="Enter Phone Number">
-        <p class="form-text">FORMAT: (###)###-####</p>
+        <p id="phone-format" class="form-text">FORMAT: (###)###-####</p>
     </div>
 
     <div class="form-group required">
@@ -29,7 +30,7 @@
 
     <div class="form-group">
         <label>Dish Description</label>
-        <textarea class="form-control" name="DishDescription" rows="3"></textarea>
+        <textarea id="dish-desc" class="form-control" name="DishDescription" rows="3"></textarea>
     </div>
 
     <div class="form-group form-check">

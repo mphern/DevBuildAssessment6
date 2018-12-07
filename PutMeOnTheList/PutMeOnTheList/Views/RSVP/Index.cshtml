@@ -7,9 +7,10 @@
 <h2>RSVP</h2>
 
 <form action="/RSVP/Welcome" method="post">
-    <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" name="Email" placeholder="Enter Email" required>
+    <input type="hidden" name="GuestID"/>
+    <div class="form-group required">
+        <label class="control-label">Email address</label>
+        <input type="email" class="form-control" name="EmailAddress" placeholder="Enter Email" required>
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
     </div>
     <div class="form-group required">
@@ -23,7 +24,7 @@
 
     <div class="form-group required">
         <label class="control-label">Will you be attending?</label>
-        <select class="form-control" name="Attending" id="Attending" required>
+        <select class="form-control" name="Attending" id="Attending" onchange="ShowDates()" required>
             <option value=""></option>
             <option value="Yes">Yes</option>
             <option value="No">No</option>
@@ -31,16 +32,16 @@
     </div>
 
     <div class="form-group" id="PartyDates">
-        <label>If attending, which party are you planning to attend?</label><br />
-        <input type="radio" name="PartyDate" value="12/29/18"> 12/29/18<br>
-        <input type="radio" name="PartyDate" value="12/30/18"> 12/30/18<br>
+        <label>Which party are you planning to attend?</label><br />
+        <input type="radio" id="PartyDate1" name="AttendanceDate" value="12/29/18"> 12/29/18<br>
+        <input type="radio" id="PartyDate2" name="AttendanceDate" value="12/30/18"> 12/30/18<br>
 
     </div>
 
     <div class="form-group form-check">
         <input type="checkbox" name="PlusOne"> I'm bringing a "Plus 1"<br>
     </div>
-    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+    <button type="submit" class="btn btn-primary btn-lg" onclick="CheckForDate()">Submit</button>
 </form>
 <br />
 <br />

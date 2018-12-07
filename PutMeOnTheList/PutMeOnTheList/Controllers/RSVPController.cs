@@ -17,7 +17,9 @@ namespace PutMeOnTheList.Controllers
 
         public ActionResult Welcome(Guest guest)
         {
-
+            PartyDBEntities ORM = new PartyDBEntities();
+            ORM.Guests.Add(guest);
+            ORM.SaveChanges();
 
             return View(guest);
         }

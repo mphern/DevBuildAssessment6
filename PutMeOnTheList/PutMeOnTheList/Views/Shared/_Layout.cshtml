@@ -4,11 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css")
 </head>
-<body>
+<body onload="ShowDates()">
+
+    <nav id="nav-bar" class="navbar navbar-expand-lg navbar-light bg-light">
+
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="/Home/Index">Home | <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link active" href="/RSVP/Index">RSVP |</a>
+                <a class="nav-item nav-link active" href="/Dish/Index">Add a Dish |</a>
+                <a class="nav-item nav-link active" href="/Dish/DishList">See List of Dishes</a>
+            </div>
+        </div>
+    </nav>
 
     <div class="container body-content">
         @RenderBody()
@@ -24,5 +37,6 @@
     @Scripts.Render("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js")
     @Scripts.Render("https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js")
     @RenderSection("scripts", required: false)
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
 </body>
 </html>

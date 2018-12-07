@@ -4,17 +4,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1 class="text-primary text-center">DevBuild PotLuck-Bonanza 2018!</h1>
-<br />
+<h1 id="main-header" class="text-primary text-center">DevBuild PotLuck-Bonanza 2018!</h1>
+<br /> <br /> <br />
 <div class="container-fluid text-center">
     <div class="row">
 
         <div class="col">
-            <a href="/RSVP/Index" id="register" class="btn btn-primary btn-lg px-5">RSVP &raquo;</a>
+            <a href="/RSVP/Index" id="register" class="btn btn-primary btn-lg px-5 mt-5">RSVP &raquo;</a>
         </div>
-    
+
         <div class="col">
-            <a href="/Dish/Index" id="register" class="btn btn-primary btn-lg px-5">Bring a Dish &raquo;</a>
+            <a href="/Dish/Index" id="register" class="btn btn-primary btn-lg px-5 mt-5">Add a Dish &raquo;</a>
+        </div>
+
+        <div class="col">
+            <a href="/Dish/DishList" id="register" class="btn btn-primary btn-lg px-5 mt-5">View List of Dishes &raquo;</a>
         </div>
 
     </div>

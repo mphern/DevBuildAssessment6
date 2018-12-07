@@ -10,23 +10,23 @@
             <PropertyRef Name="DishID" />
           </Key>
           <Property Name="DishID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
-          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
-          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="24" Nullable="false" />
-          <Property Name="DishName" Type="nvarchar" MaxLength="50" />
-          <Property Name="DishDescription" Type="nvarchar" MaxLength="100" />
-          <Property Name="GlutenFree" Type="nvarchar" MaxLength="3" />
-          <Property Name="Vegan" Type="nvarchar" MaxLength="3" />
-          <Property Name="Nuts" Type="nvarchar" MaxLength="3" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PhoneNumber" Type="nvarchar" MaxLength="24" />
+          <Property Name="DishName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DishDescription" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="GlutenFree" Type="nvarchar" MaxLength="10" />
+          <Property Name="Vegan" Type="nvarchar" MaxLength="10" />
+          <Property Name="Nuts" Type="nvarchar" MaxLength="10" />
         </EntityType>
         <EntityType Name="Guest">
           <Key>
             <PropertyRef Name="GuestID" />
           </Key>
           <Property Name="GuestID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
-          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
-          <Property Name="AttendanceDate" Type="nvarchar" MaxLength="15" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AttendanceDate" Type="nvarchar" MaxLength="15" Nullable="false" />
           <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
           <Property Name="PlusOne" Type="nvarchar" MaxLength="3" />
           <Property Name="Attending" Type="nvarchar" MaxLength="3" />
@@ -44,23 +44,23 @@
             <PropertyRef Name="DishID" />
           </Key>
           <Property Name="DishID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="PhoneNumber" Type="String" MaxLength="24" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="DishName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="DishDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="GlutenFree" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
-          <Property Name="Vegan" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
-          <Property Name="Nuts" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+          <Property Name="DishName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DishDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="GlutenFree" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Vegan" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Nuts" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="Guest">
           <Key>
             <PropertyRef Name="GuestID" />
           </Key>
           <Property Name="GuestID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="AttendanceDate" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AttendanceDate" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="PlusOne" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
           <Property Name="Attending" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
