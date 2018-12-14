@@ -1,4 +1,6 @@
-﻿@helper GetButtonVisibility(string controller, string action)
+﻿@using PutMeOnTheList.Models;
+
+@helper GetButtonVisibility(string controller, string action)
 {
     if ((string)ViewContext.RouteData.Values["controller"] == controller &&
         (string)ViewContext.RouteData.Values["action"] == action)
@@ -11,10 +13,24 @@
     }
 }
 
+
+@{  PartyDBEntities ORM = new PartyDBEntities();
+    List<Guest> guestList = ORM.Guests.ToList();
+    Guest LoggedInGuest = new Guest();
+    foreach(Guest guest in guestList)
+    {
+        if(guest.EmailAddress == User.Identity.Name)
+        {
+            LoggedInGuest = guest;
+        }
+    }
+}
+
 <div class="navbar-nav navbar-right">
     @if (Request.IsAuthenticated)
+
     {
-        <p class="nav-item nav-link active navbar-right mr-5">Hello @User.Identity.Name! <strong class="ml-3"><a class="" href="/RSVP/LogOut">Sign Out</a></strong></p>
+        <p class="nav-item nav-link active navbar-right mr-5">Hello @LoggedInGuest.FirstName! <strong class="ml-3"><a class="" href="/RSVP/LogOut">Sign Out</a></strong></p>
     }
     else
     {
