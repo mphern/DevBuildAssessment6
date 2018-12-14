@@ -1,4 +1,5 @@
-﻿
+﻿@model PutMeOnTheList.Models.RSVPModel
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -6,8 +7,9 @@
 
 <h2>RSVP</h2>
 
-<form action="/RSVP/Welcome" method="post">
-    <input type="hidden" name="GuestID"/>
+<form action="/RSVP/RSVP" method="post">
+    @Html.ValidationSummary()
+    <input type="hidden" name="GuestID" />
     <div class="form-group required">
         <label class="control-label">Email address</label>
         <input type="email" class="form-control" name="EmailAddress" placeholder="Enter Email" required>

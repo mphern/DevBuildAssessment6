@@ -10,15 +10,21 @@ namespace PutMeOnTheList.Controllers
 {
     public class DishController : Controller
     {
+        [Authorize]
         // GET: Dish
         public ActionResult Index()
         {
             return View();
         }
 
+        [Authorize]
         public ActionResult SubmitDish(Dish dish)
         {
             PartyDBEntities ORM = new PartyDBEntities();
+
+            dish.UserName = User.Identity.Name;
+
+
             ORM.Dishes.Add(dish);
             ORM.SaveChanges();
 
@@ -60,7 +66,7 @@ namespace PutMeOnTheList.Controllers
             ORM.Entry(oldDish).State = EntityState.Modified;
             ORM.SaveChanges();
 
-            return RedirectToAction("DishList");
+            return RedirectToAction("ViewMyDishes");
 
         }
 
@@ -72,7 +78,18 @@ namespace PutMeOnTheList.Controllers
             ORM.Dishes.Remove(dish);
             ORM.SaveChanges();
 
-            return RedirectToAction("DishList");
+            return RedirectToAction("ViewMyDishes");
+        }
+
+        [Authorize]
+        public ActionResult ViewMyDishes()
+        {
+            string userName = User.Identity.Name;
+            PartyDBEntities ORM = new PartyDBEntities();
+
+            ViewBag.GuestDishes = ORM.Dishes.Where(x => x.UserName == userName);
+
+            return View();
         }
     }
 }

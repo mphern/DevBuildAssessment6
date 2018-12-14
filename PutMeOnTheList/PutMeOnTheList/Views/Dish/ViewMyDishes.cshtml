@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "ViewMyDishes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 id="my-dish-list">List of My Dishes</h2>
+
+
+
+<table class="table border-dark">
+
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Phone Number</th>
+        <th>Dish Name</th>
+        <th>Dish Description</th>
+        <th class="text-center">Gluten Free?</th>
+        <th class="text-center">Vegan?</th>
+        <th class="text-center">Has nuts?</th>
+    </tr>
+
+    @foreach (var dish in ViewBag.GuestDishes)
+    {
+
+        <tr>
+            <td>@dish.FirstName</td>
+            <td>@dish.LastName</td>
+            <td>@dish.PhoneNumber</td>
+            <td>@dish.DishName</td>
+            <td style="font-size: small">@dish.DishDescription</td>
+            <td class="text-center">
+                @if (dish.GlutenFree == "on")
+                {
+                    <text>Yes</text>
+                }
+            </td>
+            <td class="text-center">
+                @if (dish.Vegan == "on")
+                {
+                    <text>Yes</text>
+                }
+            </td>
+            <td class="text-center">
+                @if (dish.Nuts == "on")
+                {
+                    <text>Yes</text>
+                }
+            </td>
+
+            <td><a href="~/Dish/EditDish?DishID=@dish.DishID">Edit</a></td>
+            <td><a href="~/Dish/DeleteDish?DishID=@dish.DishID">Delete</a></td>
+        </tr>
+
+    }
+
+</table>
+
+
+

@@ -37,7 +37,7 @@ textarea {
     font-size: 100px;
 }
 
-#rsvp-home, #dish-home, #guest-list-home, #dish-list-home {
+#rsvp-home, #dish-home, #guest-list-home, #dish-list-home, #my-dish-list-home {
     font-size: 2.25rem;
 }
 
@@ -66,7 +66,7 @@ textarea {
     font-size: small !important;
 }
 
-#dish-list, #guest-list {
+#dish-list, #guest-list, #my-dish-list {
     font-family: 'Acme', sans-serif;
     font-size: 2.75rem !important;
 }

@@ -1,0 +1,18 @@
+﻿@model PutMeOnTheList.Models.LoginModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+<form action="/RSVP/Login" method="post">
+    @Html.ValidationSummary()
+    <div class="form-group required">
+        <label class="control-label">Enter Email Address you RSVP'ed Under</label>
+        <input type="email" class="form-control" name="EmailAddress" placeholder="Enter Email" required>
+        <input type="submit" class="btn-primary btn-lg mt-2" />
+    </div>
+
+</form>

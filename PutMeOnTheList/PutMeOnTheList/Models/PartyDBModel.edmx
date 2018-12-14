@@ -10,6 +10,7 @@
             <PropertyRef Name="DishID" />
           </Key>
           <Property Name="DishID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="75" />
           <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="PhoneNumber" Type="nvarchar" MaxLength="24" />
@@ -45,6 +46,7 @@
             <PropertyRef Name="DishID" />
           </Key>
           <Property Name="DishID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="75" FixedLength="false" Unicode="true" />
           <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="PhoneNumber" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
@@ -80,6 +82,7 @@
             <EntityTypeMapping TypeName="PartyDBModel.Dish">
               <MappingFragment StoreEntitySet="Dish">
                 <ScalarProperty Name="DishID" ColumnName="DishID" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="LastName" ColumnName="LastName" />
                 <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
