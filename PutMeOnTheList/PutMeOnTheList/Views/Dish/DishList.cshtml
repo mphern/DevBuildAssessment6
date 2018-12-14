@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>List of Candles</h2>
+<h2 id="dish-list">List of Dishes</h2>
 
 
 
@@ -16,35 +16,38 @@
         <th>Phone Number</th>
         <th>Dish Name</th>
         <th>Dish Description</th>
-        <th>Gluten Free?</th>
-        <th>Vegan?</th>
-        <th>Has nuts?</th>
+        <th class="text-center">Gluten Free?</th>
+        <th class="text-center">Vegan?</th>
+        <th class="text-center">Has nuts?</th>
     </tr>
 
     @foreach (var dish in ViewBag.DishList)
     {
-        if(dish.GlutenFree == "on")
-        {
-            dish.GlutenFree = "Yes";
-        }
-        if (dish.Vegan == "on")
-        {
-            dish.Vegan = "Yes";
-        }
-        if (dish.Nuts == "on")
-        {
-            dish.Nuts = "Yes";
-        }
 
         <tr>
             <td>@dish.FirstName</td>
             <td>@dish.LastName</td>
             <td>@dish.PhoneNumber</td>
             <td>@dish.DishName</td>
-            <td>@dish.DishDescription</td>
-            <td>@dish.GlutenFree</td>
-            <td>@dish.Vegan</td>
-            <td>@dish.Nuts</td>
+            <td style="font-size: small">@dish.DishDescription</td>
+            <td class="text-center">
+                @if (dish.GlutenFree == "on")
+                {
+                    <text>Yes</text>
+                }
+            </td>
+            <td class="text-center">
+                @if (dish.Vegan == "on")
+                {
+                    <text>Yes</text>
+                }
+            </td>
+            <td class="text-center">
+                @if (dish.Nuts == "on")
+                {
+                    <text>Yes</text>
+                }
+            </td>
 
             <td><a href="~/Dish/EditDish?DishID=@dish.DishID">Edit</a></td>
             <td><a href="~/Dish/DeleteDish?DishID=@dish.DishID">Delete</a></td>

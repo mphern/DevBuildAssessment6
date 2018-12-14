@@ -1,11 +1,11 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: url("/Images/potluck.jpeg") !important;
+    background-image: url("/Images/potluck.jpeg");
     background-repeat: no-repeat;
     background-size: auto;
     font-size: 1.8rem !important;
-    min-height: 1000px !important;
+    min-height: 850px;
 }
     /* Set padding to keep content from hitting the edges */
     .body-content {
@@ -34,15 +34,15 @@ textarea {
 
 #main-header {
     font-family: 'Acme', sans-serif;
-    font-size: 100px !important;
+    font-size: 100px;
 }
 
-#register {
-    font-size: 3.25rem !important;
+#rsvp-home, #dish-home, #guest-list-home, #dish-list-home {
+    font-size: 2.25rem;
 }
 
 .form-control {
-    font-size: 1.35rem !important;
+    font-size: 1.35rem;
 }
 
 #rsvp {
@@ -58,9 +58,16 @@ textarea {
 }
 
 #phone-format {
-    font-size: 1rem !important;
+    font-size: 1rem;
 }
 
-#dish-desc {
-    max-width: 275px;
+.dish-desc {
+    max-width: 300px;
+    font-size: small !important;
 }
+
+#dish-list, #guest-list {
+    font-family: 'Acme', sans-serif;
+    font-size: 2.75rem !important;
+}
+

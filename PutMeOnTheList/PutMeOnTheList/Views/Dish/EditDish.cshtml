@@ -8,23 +8,62 @@
 
 <form action="~/Dish/SaveDishChanges" method="post">
     <input type="hidden" name="DishID" value="@Model.DishID" />
-    <label>First Name:</label>
-    <input class="mx-2" type="text" name="FirstName" value="@Model.FirstName" />
-    <label>Last Name:</label>
-    <input class="mx-2" type="text" name="LastName" value="@Model.LastName" /><br />
-    <label>Phone Number:</label>
-    <input class="mx-2" type="text" name="PhoneNumber" value="@Model.PhoneNumber" />
-    <label>Dish Name:</label>
-    <input class="mx-2" type="text" name="DishName" value="@Model.DishName" /><br />
-    <label>Dish Description:</label>
-    <input class="mx-2" type="text" name="DishDescription" value="@Model.DishDescription" />
-    <label>Gluten Free:</label>
-    <input class="mx-2" type="text" name="GlutenFree" value="@Model.GlutenFree" /><br />
-    <label>Vegan:</label>
-    <input class="mx-2" type="text" name="Vegan" value="@Model.Vegan" />
-    <label>Has Nuts:</label>
-    <input class="mx-2" type="text" name="Nuts" value="@Model.Nuts" />
+    <div class="row">
+        <div class="col-lg-3">
+            <label>First Name:</label>
+            <input class="mx-2" type="text" name="FirstName" value="@Model.FirstName" />
+        </div>
+        <div class="col-lg-3">
+            <label>Last Name:</label>
+            <input class="mx-2" type="text" name="LastName" value="@Model.LastName" />
+        </div>
+    </div><br />
+    <div class="row">
+        <div class="col-lg-3">
+            <label>Phone Number:</label>
+            <input class="mx-2" type="tel" pattern="[\(]\d{3}[\)]\d{3}[\-]\d{4}" name="PhoneNumber" value="@Model.PhoneNumber" />
+        </div>
+        <div class="col-lg-3">
+            <label>Dish Name:</label>
+            <input class="mx-2" type="text" name="DishName" value="@Model.DishName" />
+        </div>
+    </div><br />
+    <div class="row">
+        <div class="col-lg-3">
+            <label>Dish Description:</label>
+            <textarea class="form-control mx-2 dish-desc" type="text" name="DishDescription" rows="3" value="@Model.DishDescription">@Model.DishDescription</textarea>
+        </div>
+    </div><br />
+          <div class="row">
+              <div class="form-group form-check">
+                  @if (Model.GlutenFree == "on")
+                  {
+                      <input type="checkbox" value="@Model.GlutenFree" name="GlutenFree" checked="checked"> <text>This dish is Gluten Free</text><br />
+                  }
+                  else
+                  {
+                      <input type="checkbox" value="@Model.GlutenFree" name="GlutenFree"> <text>This dish is Gluten Free</text><br />
+                  }
+                  @if (Model.Vegan == "on")
+                  {
+                      <input type="checkbox" value="@Model.Vegan" name="Vegan" checked="checked"> <text>This dish is Vegan</text><br>
+                  }
+                  else
+                  {
+                      <input type="checkbox" value="@Model.Vegan" name="Vegan"> <text>This dish is Vegan</text><br>
+                  }
+                  @if (Model.Nuts == "on")
+                  {
+                      <input type="checkbox" value="@Model.Nuts" name="Nuts" checked="checked"> <text>This dish contains nuts</text><br>
+                  }
+                  else
+                  {
+                      <input type="checkbox" value="@Model.Nuts" name="Nuts"> <text>This dish contains nuts</text><br>
+                  }
+              </div>
+          </div><br />
+    <br />
     <input type="submit" class="btn-primary" />
-
+    
 </form>
 

@@ -15,13 +15,13 @@ namespace PutMeOnTheList.Models
     public partial class Dish
     {
         public int DishID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public string PhoneNumber { get; set; }
         public string DishName { get; set; }
         public string DishDescription { get; set; }
         public string GlutenFree { get; set; }
         public string Vegan { get; set; }
         public string Nuts { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
     }
 }

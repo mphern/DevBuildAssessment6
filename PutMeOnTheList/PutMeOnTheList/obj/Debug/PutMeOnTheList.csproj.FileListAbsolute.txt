@@ -73,7 +73,6 @@ C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOn
 C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\obj\Debug\PutMeOnTheList.csprojAssemblyReference.cache
 C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\obj\Debug\PutMeOnTheList.csproj.CoreCompileInputs.cache
 C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\obj\Debug\PutMeOnTheList.csproj.CopyComplete
 C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\obj\Debug\PutMeOnTheList.dll
@@ -82,3 +81,4 @@ C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOn
 C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\bin\EntityFramework.SqlServer.dll
 C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\bin\EntityFramework.xml
 C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\bin\EntityFramework.SqlServer.xml
+C:\Users\mhern\OneDrive - KNEX\Desktop\DevBuild Assessments\Assessment 6\PutMeOnTheList\PutMeOnTheList\obj\Debug\PutMeOnTheList.csprojAssemblyReference.cache

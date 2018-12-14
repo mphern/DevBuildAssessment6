@@ -23,5 +23,13 @@ namespace PutMeOnTheList.Controllers
 
             return View(guest);
         }
+
+        public ActionResult GuestList()
+        {
+            PartyDBEntities ORM = new PartyDBEntities();
+            ViewBag.GuestList = ORM.Guests.ToList();
+
+            return View();
+        }
     }
 }

@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "ViewGuestList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 id="guest-list">Guest List</h2>
+
+<table class="table border-dark">
+
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+        <th class="text-center">Party Date Attending</th>
+        <th class="text-center">Plus One?</th>
+    </tr>
+    @{int totalGuests = 0; }
+    @{int totalGuests1 = 0; }
+    @{int totalGuests2 = 0; }
+    @foreach (var guest in ViewBag.GuestList)
+    {
+        <tr>
+            @if(guest.Attending == "Yes")
+            {
+                <td>@guest.FirstName</td>
+                <td>@guest.LastName</td>
+                <td>@guest.EmailAddress</td>
+                <td class="text-center">@guest.AttendanceDate</td>
+                <td class="text-center">
+                    @if (guest.PlusOne == "on")
+                    {
+                        <text>Yes</text>
+                        if (guest.AttendanceDate == "12/29/18")
+                        {
+                            totalGuests1 += 2;
+                            totalGuests += 2;
+                        }
+                        else
+                        {
+                            totalGuests2 += 2;
+                            totalGuests += 2;
+                        }
+                    }
+                    else
+                    {
+                        if (guest.AttendanceDate == "12/29/18")
+                        {
+                            totalGuests1 += 1;
+                            totalGuests += 1;
+                        }
+                        else
+                        {
+                            totalGuests2 += 1;
+                            totalGuests += 1;
+                        }
+                    }
+                </td>
+            }
+        </tr>
+    }
+</table>
+<h2>Total Guests: @totalGuests     Total Guests at 12/29/18 Party: @totalGuests1     Total Guests at 12/30/18 Party: @totalGuests2</h2>
+

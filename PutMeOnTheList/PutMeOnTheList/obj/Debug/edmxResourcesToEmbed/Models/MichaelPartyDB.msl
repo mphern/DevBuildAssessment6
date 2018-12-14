@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="PartyDBModel1StoreContainer" CdmEntityContainer="PartyDBEntities">
+  <EntityContainerMapping StorageEntityContainer="PartyDBModelStoreContainer" CdmEntityContainer="PartyDBEntities">
     <EntitySetMapping Name="Dishes">
-      <EntityTypeMapping TypeName="IsTypeOf(PartyDBModel1.Dish)">
-        <MappingFragment StoreEntitySet="Dishes">
+      <EntityTypeMapping TypeName="PartyDBModel.Dish">
+        <MappingFragment StoreEntitySet="Dish">
           <ScalarProperty Name="DishID" ColumnName="DishID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
           <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
           <ScalarProperty Name="DishName" ColumnName="DishName" />
           <ScalarProperty Name="DishDescription" ColumnName="DishDescription" />
           <ScalarProperty Name="GlutenFree" ColumnName="GlutenFree" />
           <ScalarProperty Name="Vegan" ColumnName="Vegan" />
           <ScalarProperty Name="Nuts" ColumnName="Nuts" />
-          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
-          <ScalarProperty Name="LastName" ColumnName="LastName" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Guests">
-      <EntityTypeMapping TypeName="IsTypeOf(PartyDBModel1.Guest)">
-        <MappingFragment StoreEntitySet="Guests">
+      <EntityTypeMapping TypeName="PartyDBModel.Guest">
+        <MappingFragment StoreEntitySet="Guest">
           <ScalarProperty Name="GuestID" ColumnName="GuestID" />
           <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="LastName" ColumnName="LastName" />
