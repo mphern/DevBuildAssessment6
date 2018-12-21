@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PartyDBModelStoreContainer" CdmEntityContainer="PartyDBEntities">
+    <EntitySetMapping Name="Characters">
+      <EntityTypeMapping TypeName="PartyDBModel.Character">
+        <MappingFragment StoreEntitySet="Character">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Culture" ColumnName="Culture" />
+          <ScalarProperty Name="Died" ColumnName="Died" />
+          <ScalarProperty Name="CharacterNumber" ColumnName="CharacterNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dishes">
+      <EntityTypeMapping TypeName="PartyDBModel.Dish">
+        <MappingFragment StoreEntitySet="Dish">
+          <ScalarProperty Name="DishID" ColumnName="DishID" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="DishName" ColumnName="DishName" />
+          <ScalarProperty Name="DishDescription" ColumnName="DishDescription" />
+          <ScalarProperty Name="GlutenFree" ColumnName="GlutenFree" />
+          <ScalarProperty Name="Vegan" ColumnName="Vegan" />
+          <ScalarProperty Name="Nuts" ColumnName="Nuts" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Guests">
+      <EntityTypeMapping TypeName="PartyDBModel.Guest">
+        <MappingFragment StoreEntitySet="Guest">
+          <ScalarProperty Name="GuestID" ColumnName="GuestID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="AttendanceDate" ColumnName="AttendanceDate" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="PlusOne" ColumnName="PlusOne" />
+          <ScalarProperty Name="Attending" ColumnName="Attending" />
+          <ScalarProperty Name="CharacterNumber" ColumnName="CharacterNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

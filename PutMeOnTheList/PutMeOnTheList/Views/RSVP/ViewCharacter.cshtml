@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "ViewCharacter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Character Info</h2>
+
+
+@foreach (var character in ViewBag.Characters)
+{
+    if (character.CharacterNumber == ViewBag.CharacterNumber)
+    {
+        <p>Name: @character.Name</p>
+        <p>Gender: @character.Gender</p>
+        <p>Culture: @character.Culture</p>
+        <p>Died: @character.Died</p>
+    }
+}
+

@@ -25,6 +25,7 @@ namespace PutMeOnTheList.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Character> Characters { get; set; }
         public virtual DbSet<Dish> Dishes { get; set; }
         public virtual DbSet<Guest> Guests { get; set; }
     }

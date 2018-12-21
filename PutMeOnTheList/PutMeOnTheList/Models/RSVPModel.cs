@@ -19,5 +19,6 @@ namespace PutMeOnTheList.Models
         public string PlusOne { get; set; }
         [Required]
         public string Attending { get; set; }
+        public string CharacterNumber { get; set; }
     }
 }

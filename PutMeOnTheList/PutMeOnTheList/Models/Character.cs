@@ -12,15 +12,12 @@ namespace PutMeOnTheList.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Guest
+    public partial class Character
     {
-        public int GuestID { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string AttendanceDate { get; set; }
-        public string EmailAddress { get; set; }
-        public string PlusOne { get; set; }
-        public string Attending { get; set; }
+        public string Name { get; set; }
+        public string Gender { get; set; }
+        public string Culture { get; set; }
+        public string Died { get; set; }
         public string CharacterNumber { get; set; }
     }
 }

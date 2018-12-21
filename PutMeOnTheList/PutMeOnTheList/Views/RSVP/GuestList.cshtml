@@ -14,6 +14,7 @@
         <th>Email Address</th>
         <th class="text-center">Party Date Attending</th>
         <th class="text-center">Plus One?</th>
+        <th>Fav GOT Character</th>
     </tr>
     @{int totalGuests = 0; }
     @{int totalGuests1 = 0; }
@@ -21,7 +22,7 @@
     @foreach (var guest in ViewBag.GuestList)
     {
         <tr>
-            @if(guest.Attending == "Yes")
+            @if (guest.Attending == "Yes")
             {
                 <td>@guest.FirstName</td>
                 <td>@guest.LastName</td>
@@ -56,9 +57,25 @@
                         }
                     }
                 </td>
+                <td>
+                    @foreach (var character in ViewBag.Characters)
+                    {
+                        if (guest.CharacterNumber == character.CharacterNumber)
+                        {
+                            <a href="~/RSVP/ViewCharacter?CharacterNumber=@character.CharacterNumber"> @character.Name </a>
+                        }
+                    }
+
+                </td>
+
             }
         </tr>
+
     }
 </table>
-<h2>Total Guests: @totalGuests     Total Guests at 12/29/18 Party: @totalGuests1     Total Guests at 12/30/18 Party: @totalGuests2</h2>
+
+<strong class="mr-5">Total Guests: @totalGuests </strong> 
+<strong class="mr-5">Total Guests at 12/29/18 Party: @totalGuests1 </strong>
+<strong>Total Guests at 12/30/18 Party: @totalGuests2</strong>
+
 

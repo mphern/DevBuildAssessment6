@@ -161,33 +161,37 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\APIController.cs" />
     <Compile Include="Controllers\DishController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\RSVPController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Character.cs">
+      <DependentUpon>PartyDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Dish.cs">
-      <DependentUpon>PartyDBModel.tt</DependentUpon>
+      <DependentUpon>PartyDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Guest.cs">
-      <DependentUpon>PartyDBModel.tt</DependentUpon>
+      <DependentUpon>PartyDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\LoginModel.cs" />
-    <Compile Include="Models\PartyDBModel.Context.cs">
+    <Compile Include="Models\PartyDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PartyDBModel.Context.tt</DependentUpon>
+      <DependentUpon>PartyDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PartyDBModel.cs">
+    <Compile Include="Models\PartyDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PartyDBModel.tt</DependentUpon>
+      <DependentUpon>PartyDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\PartyDBModel.Designer.cs">
+    <Compile Include="Models\PartyDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>PartyDBModel.edmx</DependentUpon>
+      <DependentUpon>PartyDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\RSVPModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -204,24 +208,24 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\potluck.jpeg" />
-    <Content Include="Models\PartyDBModel.Context.tt">
+    <Content Include="Models\PartyDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PartyDBModel.edmx</DependentUpon>
-      <LastGenOutput>PartyDBModel.Context.cs</LastGenOutput>
+      <DependentUpon>PartyDB.edmx</DependentUpon>
+      <LastGenOutput>PartyDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\PartyDBModel.tt">
+    <Content Include="Models\PartyDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>PartyDBModel.edmx</DependentUpon>
-      <LastGenOutput>PartyDBModel.cs</LastGenOutput>
+      <DependentUpon>PartyDB.edmx</DependentUpon>
+      <LastGenOutput>PartyDB.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\PartyDBModel.edmx">
+    <EntityDeploy Include="Models\PartyDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>PartyDBModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>PartyDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\PartyDBModel.edmx.diagram">
-      <DependentUpon>PartyDBModel.edmx</DependentUpon>
+    <Content Include="Models\PartyDB.edmx.diagram">
+      <DependentUpon>PartyDB.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -259,9 +263,11 @@
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\Dish\ViewMyDishes.cshtml" />
     <Content Include="Views\RSVP\Login.cshtml" />
+    <Content Include="Views\RSVP\ViewCharacter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\API\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

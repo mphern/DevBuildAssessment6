@@ -5,6 +5,16 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="PartyDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Character">
+          <Key>
+            <PropertyRef Name="CharacterNumber" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Culture" Type="nvarchar" MaxLength="75" />
+          <Property Name="Died" Type="nvarchar" MaxLength="50" />
+          <Property Name="CharacterNumber" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
         <EntityType Name="Dish">
           <Key>
             <PropertyRef Name="DishID" />
@@ -31,8 +41,10 @@
           <Property Name="EmailAddress" Type="nvarchar" MaxLength="50" />
           <Property Name="PlusOne" Type="nvarchar" MaxLength="3" />
           <Property Name="Attending" Type="nvarchar" MaxLength="3" />
+          <Property Name="CharacterNumber" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="PartyDBModelStoreContainer">
+          <EntitySet Name="Character" EntityType="Self.Character" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Dish" EntityType="Self.Dish" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Guest" EntityType="Self.Guest" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -41,6 +53,16 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="PartyDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Character">
+          <Key>
+            <PropertyRef Name="CharacterNumber" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Culture" Type="String" MaxLength="75" FixedLength="false" Unicode="true" />
+          <Property Name="Died" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CharacterNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
         <EntityType Name="Dish">
           <Key>
             <PropertyRef Name="DishID" />
@@ -67,8 +89,10 @@
           <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="PlusOne" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
           <Property Name="Attending" Type="String" MaxLength="3" FixedLength="false" Unicode="true" />
+          <Property Name="CharacterNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="PartyDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Characters" EntityType="Self.Character" />
           <EntitySet Name="Dishes" EntityType="Self.Dish" />
           <EntitySet Name="Guests" EntityType="Self.Guest" />
         </EntityContainer>
@@ -78,6 +102,17 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="PartyDBModelStoreContainer" CdmEntityContainer="PartyDBEntities">
+          <EntitySetMapping Name="Characters">
+            <EntityTypeMapping TypeName="PartyDBModel.Character">
+              <MappingFragment StoreEntitySet="Character">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Culture" ColumnName="Culture" />
+                <ScalarProperty Name="Died" ColumnName="Died" />
+                <ScalarProperty Name="CharacterNumber" ColumnName="CharacterNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Dishes">
             <EntityTypeMapping TypeName="PartyDBModel.Dish">
               <MappingFragment StoreEntitySet="Dish">
@@ -104,6 +139,7 @@
                 <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
                 <ScalarProperty Name="PlusOne" ColumnName="PlusOne" />
                 <ScalarProperty Name="Attending" ColumnName="Attending" />
+                <ScalarProperty Name="CharacterNumber" ColumnName="CharacterNumber" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
